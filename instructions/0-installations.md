@@ -60,8 +60,8 @@ Python 3.10.4
 After having gone to the project root repository and having activated the environment, run:
 
 ```console
-python -m pip install --upgrade pip setuptools wheels
-python -m pip install requirements.txt
+python -m pip install --upgrade pip setuptools wheels pip-tools
+pip-sync
 ```
 
 Your Python development environment is now setup. Good job!
