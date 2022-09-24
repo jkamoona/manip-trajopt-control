@@ -2,9 +2,9 @@ import time
 
 import pybullet as p
 
-import src.utils.constants as constants
-from src.compute_command.compute_command import dummy_command
-from src.utils.create_simulation import create_simulation
+import utils.constants as constants
+from compute_command.compute_command import dummy_command
+from utils.create_simulation import create_simulation
 
 if __name__ == '__main__':
     client, robot = create_simulation()
