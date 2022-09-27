@@ -1,6 +1,41 @@
-from typing import Any
+from typing import Any, Optional
 
 import pybullet as p
+
+BOUNDS = tuple[float, float]
+XY = tuple[float, float]
+
+
+class Robot2R:
+    CONFIG = tuple[float, float]
+
+    def __init__(self,
+                 link_lengths: tuple[float,
+                                     float],
+                 bounds: Optional[tuple[BOUNDS,
+                                        BOUNDS]] = None) -> None:
+        ...
+
+    def forward_kinematics(self, configuration: CONFIG) -> XY:
+        ...
+
+    def inverse_kinematics(self, end_effector_position: XY) -> CONFIG:
+        ...
+
+
+class Robot3R:
+    CONFIG = tuple[float, float, float]
+
+    def __init__(self,
+                 link_lengths: tuple[float, float, float],
+                 bounds: Optional[tuple[BOUNDS, BOUNDS, BOUNDS]] = None) -> None:
+        ...
+
+    def forward_kinematics(self, configuration: CONFIG) -> XY:
+        ...
+
+    def inverse_kinematics(self, end_effector_position: XY) -> CONFIG:
+        ...
 
 
 class RobotIiwa:
