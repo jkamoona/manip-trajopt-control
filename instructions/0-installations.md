@@ -60,7 +60,7 @@ Python 3.10.4
 After having gone to the project root repository and having activated the environment, run:
 
 ```console
-python -m pip install --upgrade pip setuptools wheels pip-tools
+python -m pip install --upgrade pip setuptools wheel pip-tools
 pip-sync
 ```
 
